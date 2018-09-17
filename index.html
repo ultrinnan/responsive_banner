@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="author" content="Serhii Fedirko">
+    <meta name="revisit-after" content="1 days">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>Gearbest</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    body{
+        background: grey;
+        color: #000;
+        text-align: center;
+    }
+
+
+    .banner{
+        font-family: 'Ubuntu', sans-serif;
+        position: relative;
+        height: 90px;
+        overflow: hidden;
+    }
+
+    .slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+        color: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        box-sizing: border-box;
+    }
+    .slide.active{
+        top: -90px;
+        transition: top 0.5s ease-out;
+        z-index: 1;
+    }
+
+    .slide1{
+        background: #e6e6e6 url('slide1.jpg') top right no-repeat;
+    }
+    .slide1:after{
+        position: absolute;
+        left: 8px;
+        bottom: 4px;
+        width: 36px;
+        height: 24px;
+        content: '';
+        display: block;
+        background: url("2.png") center no-repeat;
+        background-size: contain;
+    }
+    .top{
+        text-transform: uppercase;
+        font-size: 18px;
+        position: relative;
+    }
+    .orange{
+        position: relative;
+        text-transform: uppercase;
+        background: #fc621b;
+        font-size: 21px;
+        width: 220px;
+        margin: 5px auto 3px;
+        padding: 4px 0;
+    }
+    .orange span{
+        color: #fff;
+        font-weight: bold;
+    }
+    .note{
+        position: relative;
+        font-size: 15px;
+    }
+
+    .slide2{
+        font-family: 'Caveat', cursive;
+        text-transform: uppercase;
+        background: black url('slide2.jpg')center top no-repeat;
+    }
+
+    .slide2:after{
+        position: absolute;
+        left: 8px;
+        bottom: 4px;
+        width: 36px;
+        height: 24px;
+        content: '';
+        display: block;
+        background: url("2-1.png") center no-repeat;
+        background-size: contain;
+    }
+    .tres{
+        display: block;
+        color: #e9ff39;
+        text-shadow: 1px 1px 2px saddlebrown, 0 0 1em orange, 0 0 0.2em red;
+        font-size: 50px;
+    }
+    .join{
+        position: absolute;
+        right: 24px;
+        bottom: 21px;
+        text-transform: uppercase;
+        font-size: 20px;
+        display: block;
+        color: black;
+        background: #e9ff39;
+        padding: 8px 16px;
+        border: 3px solid rgba(139, 69, 19, 0.5);
+        font-weight: bold;
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px saddlebrown, 0 0 1em orange, 0 0 0.2em red;
+        opacity: 0.8;
+    }
+
+    @media screen and (max-width: 1440px) {
+    }
+
+    @media screen and (max-width: 1024px) {
+        .slide1{
+            padding-right: 150px;
+        }
+
+        .tres{
+            font-size: 40px;
+            margin-right: 150px;
+        }
+        .join{
+            font-size: 16px;
+            bottom: 23px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .slide1{
+            padding-right: 210px;
+        }
+
+        .tres{
+            font-size: 36px;
+        }
+        .join{
+            font-size: 14px;
+            bottom: 25px;
+        }
+    }
+
+    @media screen and (max-width: 590px) {
+        .slide1{
+            padding: 0;
+        }
+        .top{
+            font-size: 14px;
+        }
+        .orange{
+            font-size: 16px;
+        }
+        .slide1:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .top, .note{
+            text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+        }
+
+        .tres{
+            font-size: 24px;
+            margin: 0;
+        }
+        .join{
+            font-size: 10px;
+            padding: 4px 8px;
+            position: initial;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .top{
+            font-size: 14px;
+        }
+
+        .tres{
+            font-size: 26px;
+        }
+    }
+</style>
+    <div class="banner">
+        <a target="_parent" href="https://www.gearbest.com/?lkid=15601697" class="slide active slide1">
+            <div class="top">
+                Набор профессионального фото-света
+            </div>
+            <div class="orange">
+                Всего за <span>$107.99</span>
+            </div>
+            <div class="note">
+                с купоном
+            </div>
+        </a>
+        <a target="_parent" href="https://www.gearbest.com/?lkid=15601697" class="slide slide2">
+            <span class="tres">
+                Охота за сокровищами!
+            </span>
+            <span class="join">Присоединиться</span>
+        </a>
+    </div>
+<script>
+    let slides = document.getElementsByClassName('slide');
+
+    function hide_slide() {
+        setInterval(function() {
+            Array.prototype.forEach.call(slides, function(slide) {
+                slide.classList.toggle('active');
+            });
+        }, 4000);
+    }
+
+    hide_slide();
+</script>
+</body>
+</html>
